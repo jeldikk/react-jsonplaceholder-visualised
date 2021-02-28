@@ -2,6 +2,8 @@ import React from 'react'
 import {useParams, useLocation} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 
+import LazyLoad from 'react-lazyload'
+
 import "./post.styles.scss"
 import {Container, Breadcrumb} from "react-bootstrap"
 import {getPostById} from "../../redux/posts/posts.selectors"
@@ -32,15 +34,14 @@ const PostPage = () => {
                 <BreadcrumbItem toPath={pathname}>{postId}</BreadcrumbItem>
             </Breadcrumb>
             <div className="post-page">
-                <h2>{post.title}</h2>
-                <p>{post.body}</p>
+                <h2 className="title">{post.title}</h2>
+                <p className="body" dangerouslySetInnerHTML={{__html: post.body}} />
             </div>
             <div className="comments">
                 <h3>Comments</h3>
-                <ErrorBoundary>
+                <LazyLoad once>
                     <CommentList postId={postId} />
-                </ErrorBoundary>
-                
+                </LazyLoad>
             </div>
         </Container>
         
