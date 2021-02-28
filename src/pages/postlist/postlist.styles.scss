@@ -1,0 +1,18 @@
+.postlist-page{
+
+    .content-wrapper{
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+
+        .post-list{
+            // flex-grow flex-shrink flex-basis;
+            flex: 1 0 auto;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        
+
+    }
+}
