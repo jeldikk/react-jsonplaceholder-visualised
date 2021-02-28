@@ -1,0 +1,36 @@
+.post-card{
+
+    border: 1px solid green;
+    border-radius: 5px;
+    // padding: 1rem;
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    .card-header{
+        display: flex;
+        border: 1px solid green;
+        .title{
+            font-weight: bold;
+        }
+        .showmore-link{
+            margin-left: auto;
+        }
+    }
+
+    .card-body{
+        border: 1px solid green;
+        .timestamp{
+            font-size: 0.75rem;
+        }
+        .likes-dislikes-replies{
+            font-size: 1rem;
+            .icon{
+                font-size: o.5rem;
+                margin-right: 10px;
+                // padding: 2px;
+            }
+        }
+    }
+    
+}
