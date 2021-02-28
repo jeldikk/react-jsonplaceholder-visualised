@@ -40,7 +40,10 @@ const PostPage = () => {
             <div className="comments">
                 <h3>Comments</h3>
                 <LazyLoad once>
-                    <CommentList postId={postId} />
+                    <ErrorBoundary>
+                        <CommentList postId={postId} />
+                    </ErrorBoundary>
+                    
                 </LazyLoad>
             </div>
         </Container>
