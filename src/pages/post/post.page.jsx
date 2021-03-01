@@ -39,7 +39,7 @@ const PostPage = () => {
             </div>
             <div className="comments">
                 <h3>Comments</h3>
-                <LazyLoad once>
+                <LazyLoad height={300} once>
                     <ErrorBoundary>
                         <CommentList postId={postId} />
                     </ErrorBoundary>
