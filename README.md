@@ -13,6 +13,7 @@
 1. re-implement whole redux functionality using @redux/toolkit
 2. implement progressive Web App(PWA) features
 3. lazily load suspensefully routes using react's new lazy+suspense pattern.
+4. To create a deployement link to host site as SPA( single page application )
  
 
 ---
