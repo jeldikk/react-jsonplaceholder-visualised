@@ -3,8 +3,10 @@ import React, { useState, useEffect } from "react";
 import "./postlist.styles.scss";
 
 import { useDispatch, useSelector } from "react-redux";
-import { Container } from "react-bootstrap";
+import { Container, Breadcrumb } from "react-bootstrap";
 import { fetchPosts } from "../../redux/posts/posts.actions";
+
+import BreadcrumbItem from '../../components/breadcrumb-item/breadcrumb-item.component'
 import Pagination from "../../components/pagination/pagination.component";
 import PostList from "../../components/post-list/post-list.component";
 
@@ -35,7 +37,11 @@ const PostListPage = () => {
   return (
     <div className="postlist-page">
       <Container className="content-wrapper" fluid="md">
-          <h1 className="text-center">Posts</h1>
+        <p>You are here:</p>
+        <Breadcrumb>
+          <BreadcrumbItem toPath="posts">posts /</BreadcrumbItem>
+        </Breadcrumb>
+        <h1 className="text-center">Posts</h1>
         <PostList posts={posts} currPage={currPage} itemsPerPage={ITEMS_PER_PAGE} />
         <Pagination
           onPageChange={onPageChange}
