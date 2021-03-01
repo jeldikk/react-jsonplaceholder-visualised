@@ -13,7 +13,7 @@ const postsReducer = function (state = initial_state, action) {
         ...state,
         posts: action.payload.map((postItem) => ({
           ...postItem,
-          body: postItem.body + faker.lorem.paragraphs(80,"<br />"),
+          body: postItem.body + faker.lorem.paragraphs(20,"<br />"),
           created: faker.date.between(FROM_DATE, TO_DATE),
           likes: faker.random.number(),
           dislikes: faker.random.number()
