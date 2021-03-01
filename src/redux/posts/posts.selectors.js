@@ -24,9 +24,17 @@ export const getPostById = createSelector(
     selectPosts,
     (_, postId) => postId,
     (posts, postId) => {
-        console.log({posts, postId})
+        // console.log({posts, postId})
         let foundElement = posts.find((post) => post.id === postId)
-        console.log(foundElement);
+        // console.log(foundElement);
         return foundElement;
+    }
+)
+
+export const getPostsByUserId = createSelector(
+    selectPosts,
+    (_, userId) => userId,
+    (posts, userId) => {
+        return posts.filter(post => post.userId === userId)
     }
 )
