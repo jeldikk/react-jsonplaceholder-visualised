@@ -3,7 +3,7 @@ import React, {useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import PostCard from "../post-card/post-card.component";
 
-function PostList({posts, currPage, itemsPerPage}) {
+function PostList({posts}) {
     //console.log(props)
 
   return (
