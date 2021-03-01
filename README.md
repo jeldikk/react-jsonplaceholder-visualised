@@ -6,8 +6,7 @@
 3. Pagination to navigate over different pages of posts
 4. Populated missing data using faker module
 5. LazyLoading post comments section using react-lazyload
-6. Error boundary conditions( which works only in production)
-7. Similar jsonplaceholder api structure is maintained as routes
+6. Similar jsonplaceholder api structure is maintained as routes
 
 **To Do**
 1. re-implement whole redux functionality using @redux/toolkit
