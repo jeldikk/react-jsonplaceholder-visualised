@@ -1,5 +1,52 @@
 .user-page{
 
+    margin-top: 2.5rem;
+    .inner-user-card{
+
+        .card-body{
+            .card-subtitle{
+                margin-top: 0.3rem;
+            }
+        }
+    }
+
+    .details-wrapper{
+        font-family: cursive;
+        
+        .name{
+            
+            font-size: 3rem;
+        }
+        .username{
+            font-size: 2rem;
+        }
+        .website{
+            font-size: 1.5rem;
+        }
+    }
+
+    .address-card{
+        margin: 10px;
+
+        .card-header{
+            font-weight: bold;
+        }
+
+        .card-body{
+
+            .card-title{
+                text-decoration: underline;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+
+            .card-text{
+                // text-transform: ;
+                text-align: right;
+                margin-bottom: 0.3rem;
+            }
+        }
+    }
 
     .details-wrapper{
         padding: 5rem;
@@ -7,5 +54,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .post-list{
+        margin-top: 2rem;
     }
 }
