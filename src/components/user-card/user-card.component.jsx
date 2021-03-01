@@ -14,7 +14,7 @@ const UserCard = ({user}) => {
                 <Card.Subtitle className="text-danger">{email}</Card.Subtitle>
             </Card.Body>
             <Card.Footer className="text-right">
-                <Link to={`user/${user.id}`}>
+                <Link to={`users/${user.id}`}>
                     <Button variant="primary">Show more ...</Button>
                 </Link>
             </Card.Footer>
