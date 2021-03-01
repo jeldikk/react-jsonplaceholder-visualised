@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import {Navbar, Nav} from "react-bootstrap"
+import {Navbar, Nav, Container} from "react-bootstrap"
 import {Link} from 'react-router-dom'
 
 import "./header.styles.scss"
@@ -24,14 +24,17 @@ const Header = () => {
     return (
         <header className="header">
             <Navbar bg="primary"  expand="md" sticky="top" onToggle={onToggleHandler} expanded={expanded}>
-                <Link className="navbar-brand" to="/">Json blogs</Link>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto" >
-                        <Link className="nav-link" onClick={()=> setExpanded(false)} to="/users">Users</Link>
-                        <Link className="nav-link" onClick={()=> setExpanded(false)} to="/posts">Posts</Link>
-                    </Nav>
-                </Navbar.Collapse>
+                <Container fluid="md">
+                    <Link className="navbar-brand" to="/">Json blogs</Link>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ml-auto" >
+                            <Link className="nav-link" onClick={()=> setExpanded(false)} to="/users">Users</Link>
+                            <Link className="nav-link" onClick={()=> setExpanded(false)} to="/posts">Posts</Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+                
             </Navbar>
         </header>
     )
