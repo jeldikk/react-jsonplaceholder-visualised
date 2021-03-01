@@ -9,6 +9,7 @@ const setUsers = (users)=>{
     }
 }
 
+// thunk action creator to fetch users
 export const fetchUsers = ()=>{
     return async (dispatch)=>{
         let results = await fetchUsersData();

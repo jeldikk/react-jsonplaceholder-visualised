@@ -1,19 +1,22 @@
-import UsersActionTypes from "./users.types"
-
+import UsersActionTypes from "./users.types";
+import faker from "faker";
 const initial_data = {
-    users: []
-}
+  users: [],
+};
 
-const usersReducer = (state=initial_data, action)=>{
-    switch(action.type){
-        case UsersActionTypes.SET_USERS:
-            return {
-                ...state,
-                users: action.payload
-            }
-        default:
-            return state;
-    }
-}
+const usersReducer = (state = initial_data, action) => {
+  switch (action.type) {
+    case UsersActionTypes.SET_USERS:
+      return {
+        ...state,
+        users: action.payload.map((user) => ({
+          ...user,
+          imageUrl: `${faker.image.animals()}?random=${faker.random.number()}`,
+        })),
+      };
+    default:
+      return state;
+  }
+};
 
-export default usersReducer
+export default usersReducer;
