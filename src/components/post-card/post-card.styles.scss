@@ -1,7 +1,16 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+$card-header-border-color: teal;
+$card-body-border-color: teal;
+$card-header-border-width: 2px;
+$card-body-border-width: 2px;
+
 .post-card{
 
-    border: 1px solid green;
-    border-radius: 5px;
+    // border: 1px solid green;
+    // border-radius: 5px;
     // padding: 1rem;
     margin: 1.5rem;
     display: flex;
@@ -9,7 +18,7 @@
 
     .card-header{
         display: flex;
-        border: 1px solid green;
+        // border: $card-header-border-width solid $card-header-border-color;
         .title{
             font-weight: bold;
         }
@@ -19,16 +28,36 @@
     }
 
     .card-body{
-        border: 1px solid green;
+        // border: $card-body-border-width solid $card-body-border-color;
         .timestamp{
             font-size: 0.75rem;
         }
         .likes-dislikes-replies{
             font-size: 1rem;
+            // margin-left: auto;
             .icon{
                 font-size: o.5rem;
                 margin-right: 10px;
                 // padding: 2px;
+            }
+        }
+    }
+
+    @include media-breakpoint-only(xs){
+        // border: 1px solid indianred;
+        margin-bottom: 0.5rem;
+        margin-right: 0.25rem;
+        margin-left: 0.25rem;
+
+        .card-header{
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body{
+            display: flex;
+            flex-direction: column;
+            .likes-dislikes-replies{
+                align-self: flex-end;
             }
         }
     }

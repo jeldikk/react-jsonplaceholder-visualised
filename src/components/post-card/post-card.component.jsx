@@ -19,7 +19,7 @@ const PostCard = ({post}) => {
     const user = useSelector(state => getUserById(state,userId))
     // console.log(user)
     return (
-        <Card className="post-card">
+        <Card className="post-card shadow shadow">
             <Card.Header>
                 <p className="title">{title.slice(0, 30)}...</p>
                 <Link className="showmore-link" to={`/posts/${id}`}>
