@@ -1,12 +1,18 @@
 .comment-card{
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
     .card-header{
         cursor: pointer;
-        border: 1px solid black;
+        // border: 1px solid black;
         
-        color: wheat;
-        background-color: saddlebrown;
-        font-weight: bold;
+        color: yellow;
+        background-color: tomato;
+        // font-weight: bold;
+    }
+
+    .likes-dislikes-replies{
+        .icon-wrapper{
+            cursor: pointer;
+        }
     }
 }
