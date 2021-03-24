@@ -9,11 +9,11 @@ const Header = () => {
 
     const [expanded, setExpanded] = useState(false)
 
-    const onNavSelect = (eventKey, event)=>{
-        // console.log({eventKey, event})
-        // console.log('onSelect')
-        setExpanded(!expanded)
-    }
+    // const onNavSelect = (eventKey, event)=>{
+    //     // console.log({eventKey, event})
+    //     // console.log('onSelect')
+    //     setExpanded(!expanded)
+    // }
 
     const onToggleHandler = (toggleInput)=>{
         // console.log({arg})
@@ -22,7 +22,7 @@ const Header = () => {
     }
 
     return (
-        <header className="header">
+        <header className="header fixed-top">
             <Navbar bg="primary"  expand="md" sticky="top" onToggle={onToggleHandler} expanded={expanded}>
                 <Container fluid="md">
                     <Link className="navbar-brand" to="/">Json blogs</Link>
