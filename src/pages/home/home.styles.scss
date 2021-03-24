@@ -1,0 +1,16 @@
+.homepage{
+    // font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    // text-align: center;
+    .title{
+        font-weight: bold;
+    }
+
+    .repo{
+        text-align: center;
+    }
+}
