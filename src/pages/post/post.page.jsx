@@ -27,13 +27,13 @@ const PostPage = () => {
     console.log({postId, post})
     return (
         
-        <Container fluid="md">
+        <Container fluid="md" className="post-page">
             <p>You are Here :</p>
             <Breadcrumb>
                 <BreadcrumbItem toPath="/posts">posts</BreadcrumbItem>
                 <BreadcrumbItem toPath={pathname}>{postId}</BreadcrumbItem>
             </Breadcrumb>
-            <div className="post-page">
+            <div className="post-page-content">
                 <h2 className="title">{post.title}</h2>
                 <p className="body" dangerouslySetInnerHTML={{__html: post.body}} />
             </div>
@@ -43,7 +43,6 @@ const PostPage = () => {
                     <ErrorBoundary>
                         <CommentList postId={postId} />
                     </ErrorBoundary>
-                    
                 </LazyLoad>
             </div>
         </Container>

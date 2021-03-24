@@ -1,14 +1,23 @@
 .post-page{
     
 
-    .title{
-        font-size: 2rem;
-        font-weight: bold;
-        text-align: center;
-        text-decoration: underline;
+    .post-page-content{
+
+        .title{
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: underline;
+        }
+    
+        .body{
+            padding: 20px;
+        }
+
     }
 
-    .body{
-        padding: 20px;
+    .comments{
+        margin-bottom: 2rem;
     }
+    
 }
