@@ -11,8 +11,6 @@ export class ErrorBoundary extends Component {
         }
     }
 
-    
-
     static getDerivedStateFromError(error){
         return {
             hasError: true,
@@ -23,13 +21,16 @@ export class ErrorBoundary extends Component {
     componentDidCatch(error, errorInfo){
         console.log({error, errorInfo})
     }
+
+
     render() {
+
+        console.log(this.state)
         if(this.state.hasError){
-            <div>Error occured while loading page</div>
+            return <div>Error occured while loading page</div>
         }
-        else{
-            return this.props.children
-        }
+        
+        return this.props.children;
 
     }
 }
