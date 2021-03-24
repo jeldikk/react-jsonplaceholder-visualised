@@ -14,6 +14,10 @@ const CommentList = ({postId}) => {
 
     const comments = useSelector((state) => selectCommentsByKey(state, postId))
 
+    // useEffect(() => {
+    //     throw Error("My error caught")
+    // }, [])
+
     useEffect(() => {
         if(!comments)
             dispatch(fetchCommentsData(postId))
