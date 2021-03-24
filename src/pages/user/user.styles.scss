@@ -1,3 +1,8 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap//scss/mixins";
+
+
 .user-page{
 
     margin-top: 2.5rem;
@@ -11,8 +16,14 @@
     }
 
     .details-wrapper{
+
         font-family: cursive;
-        
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
         .name{
             
             font-size: 3rem;
@@ -24,6 +35,7 @@
             font-size: 1.5rem;
         }
     }
+
 
     .address-card{
         margin: 10px;
@@ -48,15 +60,58 @@
         }
     }
 
-    .details-wrapper{
-        padding: 5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    
 
     .post-list{
         margin-top: 2rem;
+    }
+
+    @include media-breakpoint-only(md){
+        .details-wrapper{
+            
+            .name{
+                font-size: 2rem;
+            }
+        }
+
+
+        .address-card{
+            font-size: 0.8rem;
+            .card-body{
+                .card-text{
+
+                    text-align: start;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-only(xs){
+
+        .details-wrapper{
+            padding: 2rem;
+            display: none;
+            .name{
+                text-align: center;
+                font-size: 2rem;
+            }
+        }
+
+        .inner-user-card{
+            .card-body{
+                text-align: center;
+                .card-subtitle{
+                    text-align: center;
+                }
+            }
+        }
+
+        .address-card{
+            .card-body{
+                .card-text{
+                    text-align: center;
+                }
+            }
+        }
+        
     }
 }

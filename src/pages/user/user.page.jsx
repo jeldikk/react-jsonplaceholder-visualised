@@ -44,7 +44,7 @@ const UserPage = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col sm={4}>
+                    <Col sm={6} md={4} >
                         <Card className="address-card shadow shadow-sm">
                             <Card.Header>{`${name} ( @${username} )`}</Card.Header>
                             <Card.Body>
@@ -63,7 +63,7 @@ const UserPage = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col sm={8}>
+                    <Col  sm={6} md={8}>
                         Here goes the google map with indicator according to co-ordinates
                     </Col>
                     
