@@ -3,8 +3,6 @@ import {Helmet} from 'react-helmet'
 // import logo from './logo.svg';
 import {useDispatch} from 'react-redux'
 
-
-
 import {Switch, Route} from "react-router-dom"
 // import './App.css';
 // import {fetchU} from './redux/posts/posts.actions'
@@ -33,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <Helmet>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
         <title>Interface for jsonplaceholder api as blogpost</title>
       </Helmet>
       <Header />
@@ -50,8 +48,6 @@ function App() {
         </Suspense>
         
       </main>
-      {/* </React.StrictMode> */}
-      
     </div>
   );
 
