@@ -1,5 +1,5 @@
 ## Blog template prototype using jsonplaceholder
-
+Here is the deployment link -> [click here](https://blog-jsonplaceholder-app.web.app/)
 **Features implemented**
 1. Mobile responsive design using Bootstrap
 2. Seperate pages for users, posts, single user and single post
